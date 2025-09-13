@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+</head>
+<body>
+    <h2>Register</h2>
+    {{if .}}
+    <p style="color:red;">
+        {{if eq . "empty"}}Please fill in all fields{{end}}
+        {{if eq . "exists"}}Username already exists{{end}}
+    </p>
+    {{end}}
+    <form method="POST" action="/register">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required /><br/><br/>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required /><br/><br/>
+        <button type="submit">Register</button>
+    </form>
+    <p><a href="/login">Already have an account? Login</a></p>
+</body>
+</html>

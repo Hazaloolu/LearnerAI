@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>WSF AI CHALLENGE</h1>
+        <form method="GET" action="/logout" style="display:inline;">
+            <button type="submit">Logout</button>
+        </form>
+    </header>
+    <main>
+        <p>Welcome, {{.Username}}!</p>
+        <p>Current Time and Date: {{.Time}}</p>
+    </main>
+</body>
+</html>
